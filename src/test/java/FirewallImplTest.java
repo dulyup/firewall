@@ -19,6 +19,8 @@ public class FirewallImplTest {
         firewallImpl.acceptPacket("outbound", "tcp", "80", "192.168.2.20");
         firewallImpl.acceptPacket("outbound", "udp", "81", "255.255.255.255");
         firewallImpl.acceptPacket("outbound", "ftp", "81", "255.255.255.255");
+        firewallImpl.acceptPacket("outbound", "udp", "10-21", "255.255.255.255");
+        firewallImpl.acceptPacket("outbound", "udp", "10-15", "255.255.255.255");
     }
 
 }

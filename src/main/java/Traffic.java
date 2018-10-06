@@ -11,8 +11,10 @@ public class Traffic {
 
     private String direction;
     private String protocol;
-    private String port;
-    private String ip;
+    private Integer portL;
+    private Integer portR;
+    private Long ipL;
+    private Long ipR;
 
     @Override
     public boolean equals(Object o) {
@@ -23,8 +25,10 @@ public class Traffic {
 
         if (direction != null ? !direction.equals(traffic.direction) : traffic.direction != null) return false;
         if (protocol != null ? !protocol.equals(traffic.protocol) : traffic.protocol != null) return false;
-        if (port != null ? !port.equals(traffic.port) : traffic.port != null) return false;
-        return ip != null ? ip.equals(traffic.ip) : traffic.ip == null;
+        if (portL != null ? portL > traffic.portL : traffic.portL != null) return false;
+        if (portR != null ? portR < traffic.portR : traffic.portR != null) return false;
+        if (ipL != null ? ipL > traffic.ipL : traffic.ipL != null) return false;
+        return ipR != null ? ipR >= traffic.ipR : traffic.ipR == null;
     }
 
     @Override
@@ -32,19 +36,10 @@ public class Traffic {
         int result = super.hashCode();
         result = 31 * result + (direction != null ? direction.hashCode() : 0);
         result = 31 * result + (protocol != null ? protocol.hashCode() : 0);
-        result = 31 * result + (port != null ? port.hashCode() : 0);
-        result = 31 * result + (ip != null ? ip.hashCode() : 0);
+        result = 31 * result + (portL != null ? portL.hashCode() : 0);
+        result = 31 * result + (portR != null ? portR.hashCode() : 0);
+        result = 31 * result + (ipL != null ? ipL.hashCode() : 0);
+        result = 31 * result + (ipR != null ? ipR.hashCode() : 0);
         return result;
     }
-
-    @Override
-    public String toString() {
-        return "Traffic{" +
-                "direction='" + direction + '\'' +
-                ", protocol='" + protocol + '\'' +
-                ", port='" + port + '\'' +
-                ", ip='" + ip + '\'' +
-                '}';
-    }
-
 }

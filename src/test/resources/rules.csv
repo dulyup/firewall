@@ -1,3 +1,6 @@
+inbound,tcp,10000-20000,192.168.10.11
+outbound,udp,10-20,255.255.255.255
+inbound,tcp,80,192.168.2.20
 inbound,tcp,80,192.168.2.20
 outbound,udp,81,191.2.29.15
 inbound,udp,65535,255.255.255.255
