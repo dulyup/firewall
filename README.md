@@ -14,7 +14,7 @@ Based on my understanding, the requirements and my implementations are as follow
 
 * Receive a packet with direction, protocol, port and ip, determine if it's valid. Thus, it can be accepted by the firewall.
     * Created a Traffic class with attributes of direction, protocol, port and ip.
-    * Override equals function, to compare if values are equal between two Traffic objects, instead of comparing addresses.
+    * Override equals function, to compare if values are equal between two Traffic objects, instead of comparing addresses. In the meantime, ensure range comparision.
 
 * Test
     * Created a csv file with thousands of rules.
