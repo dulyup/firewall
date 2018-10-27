@@ -1,4 +1,4 @@
-# illumio-firewall
+# firewall
 
 Based on my understanding, the requirements and my implementations are as following:
 
